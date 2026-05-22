@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F7F8FA"
+    android:orientation="vertical"
+    android:padding="22dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="18dp"
+        android:text="إضافة تصنيف"
+        android:textColor="#1976D2"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtCourseName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="اسم التصنيف"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColor="#222"
+        android:textSize="16sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#1976D2"
+        android:text="إضافة"
+        android:textSize="17sp"
+        android:textColor="@android:color/white"
+        app:cornerRadius="12dp"
+        app:iconGravity="textStart"
+        app:iconPadding="6dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:backgroundTint="#E3EAF2"
+        android:text="إلغاء"
+        android:textSize="17sp"
+        android:textColor="#1976D2"
+        app:cornerRadius="12dp"
+        app:iconGravity="textStart"
+        app:iconPadding="6dp"/>
+</LinearLayout>

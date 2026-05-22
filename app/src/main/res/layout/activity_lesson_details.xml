@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F7F8FA">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#FB8C00"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="تفاصيل الدرس"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="18dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="3dp"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:id="@+id/tvLessonTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="استخدام Retrofit لاستهلاك API في تطبيقات الأندرويد"
+                    android:textColor="#222"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvLessonDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="
+📌 وصف الدرس:
+في هذا الدرس، سنتعلم كيفية استهلاك واجهات برمجية (APIs) في تطبيقات الأندرويد باستخدام مكتبة Retrofit، والتي تعد واحدة من أقوى المكتبات للتعامل مع البيانات عبر الإنترنت. ستتعلم كيفية إرسال واستقبال البيانات بتنسيق JSON والتعامل مع الطلبات (GET, POST, PUT, DELETE) بطريقة سهلة ومرنة.
+
+📌 ما ستتعلمه في هذا الدرس:
+✅ ما هي REST APIs؟ وكيف يمكننا استهلاكها في تطبيقات الأندرويد؟
+✅ تنصيب Retrofit وإعداد الاتصال مع API.
+✅ إرسال واستقبال البيانات باستخدام JSON.
+✅ معالجة الأخطاء والتعامل مع الاستجابات المختلفة.
+✅ استخدام LiveData و ViewModel مع Retrofit لتحسين الأداء.
+
+📌 المتطلبات:
+✅ معرفة أساسية بلغة Java أو Kotlin.
+✅ تجربة سابقة مع Android Studio و ViewModel.
+
+📌 مدة الدرس:
+🕒 90 دقيقة – تتضمن شرحًا نظريًا وتطبيقًا عمليًا."
+                    android:textColor="#444"
+                    android:textSize="17sp"
+                    tools:ignore="HardcodedText" />
+
+                <!-- زر اليوتيوب بدل النص الأزرق -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLessonYoutube"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:text="مشاهدة الدرس على Youtube"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#FF0000"
+                    app:cornerRadius="10dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</LinearLayout>
