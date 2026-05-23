@@ -1,0 +1,39 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="13dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingVertical="15dp"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/tvLessonTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="عنوان الدرس"
+            android:textSize="16sp"
+            android:textColor="#1976D2"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/cbLessonCompletions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#4CAF50"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:contentDescription="تم إكمال الدرس"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

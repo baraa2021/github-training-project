@@ -1,0 +1,196 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F8FA"
+    tools:context=".SignUpActivity">
+
+    <!-- زر الرجوع -->
+    <ImageView
+        android:id="@+id/backTv"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/icon_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- العنوان -->
+    <TextView
+        android:id="@+id/signUpTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Sign Up"
+        android:textColor="#FB8C00"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/backTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- صورة المستخدم -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="18dp"
+        app:cardCornerRadius="46dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toBottomOf="@id/signUpTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/ivUserImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_launcher_foreground"
+            android:scaleType="centerCrop"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- حقول الإدخال داخل CardView صغير -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardviewAll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        android:layout_marginHorizontal="26dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/cardview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/fullNameET"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/edit_tex"
+                android:drawableStart="@drawable/icon_person_24"
+                android:drawablePadding="14dp"
+                android:hint="@string/fullname"
+                android:inputType="text"
+                android:paddingHorizontal="12dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="6dp"/>
+
+            <EditText
+                android:id="@+id/emailET"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/edit_tex"
+                android:drawableStart="@drawable/icon_email_24"
+                android:drawablePadding="14dp"
+                android:hint="@string/abc_hotmail_com"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="12dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="14dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TextInputLayout9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/your_password"
+                app:endIconMode="password_toggle"
+                app:endIconTint="#1976D2"
+                android:layout_marginTop="14dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawableStart="@drawable/icon_lock_24"
+                    android:drawablePadding="14dp"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textSize="16sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/confirmPassword"
+                app:endIconMode="password_toggle"
+                app:endIconTint="#1976D2"
+                android:layout_marginTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/confirmPasswordEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawableStart="@drawable/icon_lock_24"
+                    android:drawablePadding="14dp"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textSize="16sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- زر التسجيل -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signupBt"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="54dp"
+        android:text="@string/sign_up"
+        android:textAllCaps="true"
+        android:textSize="17sp"
+        android:textColor="@android:color/white"
+        android:icon="@drawable/icon_arrow_forward_24"
+        android:backgroundTint="#43A047"
+        app:cornerRadius="16dp"
+        app:layout_constraintTop_toBottomOf="@id/cardviewAll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- هل لديك حساب؟ سجل دخول -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="18dp"
+        app:layout_constraintTop_toBottomOf="@id/signupBt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/alreadyHaveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/already_have_account"
+            android:textColor="#888"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/siginTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="@string/signIn"
+            android:textColor="#1976D2"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
