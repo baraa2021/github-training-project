@@ -51,7 +51,11 @@ public class SignUpActivity extends AppCompatActivity {
                 }
             }
         });
-
+// تعليق للانتقال إلى شاشة تسجيل الدخول عند الضغط على النص
+        binding.siginTv.setOnClickListener(v -> {
+            Intent intent = new Intent(SignUpActivity.this, SignInActivity.class);
+            startActivity(intent);
+        });
         binding.siginTv.setOnClickListener(v -> {
             Intent intent = new Intent(SignUpActivity.this, SignInActivity.class);
             startActivity(intent);
